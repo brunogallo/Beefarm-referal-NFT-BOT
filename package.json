@@ -4,7 +4,7 @@
     "crypto": "^1.0.1",
     "node-temp-mail": "^1.0.2",
     "nodemailer": "^6.8.0",
-    "puppeteer": "^19.4.1",
+    "puppeteer": "^19.6.2",
     "request": "^2.88.2"
   }
 }
