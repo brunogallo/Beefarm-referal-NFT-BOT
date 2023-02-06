@@ -7,8 +7,8 @@ const puppeteer = require('puppeteer');
 
 
 // Invite code do cliente
-let inviteCode = "xFKJg4c1";
-let inviteID = "371318";
+let inviteCode = "GoYCQ04s";
+let inviteID = "365927";
 
 // Gerando ID aleatório para email temporário
 function makeid(length) {
@@ -26,9 +26,9 @@ var address = new TempMail(makeid(8));
 
 // Filtrando endereço de email
 let addressFilter = address.getAddress();
-let url = "https://www.farm888.com/api/sendEmailCode?email="+addressFilter.address+"&agent_id=122&operater_id=3&language_id=en_us";
+let url = "https://www.farm888.com/api/sendEmailCode?email="+addressFilter.address+"&agent_id=151&operater_id=3&language_id=en_us";
 let openweb = "https://gameapifarm.mrmb.xyz/api/v1/agent/login_web";
-//let inviteUID = "https://www.farm888.com/api/getIdByInviteCode?invite_code="+inviteCode; //PEGAR INVITE ID inviteUID.data.invite_uid;
+//let inviteUID = "https://www.farm888.com/api/getIdByInviteCode?invite_code=O2jwmfIQ //PEGAR INVITE ID inviteUID.data.invite_uid;
 let dataTime = parseInt((new Date).getTime() / 1e3);
 let signKey = "8p83fwh50kpcuj25";
 let md5Secret
@@ -37,7 +37,7 @@ let regURL, tokenWeb, hash;
 let received = false;
 
 // Cria token de login
-let teste = JSON.stringify({"operater_id":"3","agent_id":"122","language_id":"en_us","invite":""+inviteCode+"","inviter_id":""+inviteID+""});
+let teste = JSON.stringify({"operater_id":"3","agent_id":"151","language_id":"en_us","invite":""+inviteCode+"","inviter_id":""+inviteID+""});
 let buff = new Buffer(teste);
 let base64data = buff.toString('base64');
 
@@ -143,7 +143,7 @@ let getInbox = function(){
 
                     console.log("Email encontrado, código: "+value);
 
-                    regURL = "https://www.farm888.com/api/register?code="+value+"&agent_id=122&mobile=&operater_id=3&time=&invite_code="+inviteCode+"&i="+addressFilter.address+"&s=&t=email&language_id=en_us&url=https%3A%2F%2Fwww.farm888.com%2F%23%2F";
+                    regURL = "https://www.farm888.com/api/register?code="+value+"&agent_id=151&mobile=&operater_id=3&time=&invite_code="+inviteCode+"&i="+addressFilter.address+"&s=&t=email&language_id=en_us&url=https%3A%2F%2Fwww.farm888.com%2F%23%2F";
                     
                     getRegister();
 
